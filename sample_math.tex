@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           PHYSICS SYMBOLS                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \mathcal{E} % electric field
+% \varepsilon % permittivity
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           CONSTANTS                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Charge:
+%   $\num{1.60217662e-19}C$
+%
+% Kelvin:
+%   $T=300^{\circ}K$
+%
+% Permittivity in Si
+%   $\epsilon_s = \num{1.03545e-10}\;F/m$
+%   $\epsilon_s = \num{1.03545e-12}\;F/cm}$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           EQUATIONS                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Diffusion:
+%   $\vec{J}_{n_{diff}} &= q \cdot D_N \cdot \frac{dn}{dx}$
+%   $\vec{J}_{p_{diff}} &= -q \cdot D_P \cdot \frac{dp}{dx}$
+%
+% Built-in Voltage
+%   $\phi_{bi} = \frac{kT}{q} \cdot ln\;\bigg( \frac{N_D \cdot N_A}{{n_i}^2} \bigg)$
+%
+% Total Depletion Region Width
+%   $W_{dep} = \sqrt{\frac{2\epsilon_s \phi_{bi}}{q} \cdot \Bigg( \frac{1}{N_A} + \frac{1}{N_D} \Bigg)}$
+%
+% Individual Depletion Widths for Applied Bias
+%   x_p = \sqrt{\frac{2\epsilon_s}{q} \cdot \Bigg( \frac{N_D}{N_A(N_A + N_D)} \bigg) \cdot \Bigg( \phi_{bi} - V_{applied} \bigg)}
+%   x_n = \sqrt{\frac{2\epsilon_s}{q} \cdot \Bigg( \frac{N_A}{N_D(N_A + N_D)} \bigg) \cdot \Bigg( \phi_{bi} - V_{applied} \bigg)}
+%
+% Integral Forms
+%   \large{y} = \int_{0}^{L} x} \,dx\
+%   \[ \oint_V f(s) \,ds \]
+%
+% Maximum Electric Field
+%   $\lvert \mathcal{E}_{MAX} \rvert = \lvert x_n \rvert \cdot \frac{q \cdot N_D}{\epsilon_s} = \lvert x_p \rvert \cdot \frac{q \cdot N_A}{\epsilon_s}$
+%
+% Electric Field in Terms of Potential
+%   $\large{\vec{\mathcal{E}}(x)} = -\frac{dV}{dx} = -\int_{-x_p}^{x_n} \frac{\rho}{\epsilon_{si}} \,dx\$
+%
+% Poisson's Equation is defined as:
+%   $\nabla \cdot \vec{\mathcal{E}} = \Large{\frac{\rho}{\epsilon}}$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           SCIENTIFIC NOTATION                                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Number only: \num{1e-10}
+% Number with units: \SI{1e-10}{\meter\per\second}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           SIGMA NOTATION                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Sum $\sum_{n=1}^{\infty} 2^{-n} = 1$ inside text
+%
+%   \[ \sum_{n=1}^{\infty} 2^{-n} = 1 \]
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           STANDARD MATRIX FORM                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\left[\begin{matrix}
+%    1 & 0 \\
+%    0 & 1 \\
+%\end{matrix}\right]
+%
+% \left[\begin{matrix}
+%     1 & 0\\[0.25cm]
+%     0 & 1
+% \end{matrix}\right]
+% \cdot
+% \left[\begin{matrix}
+%     1\\[0.25cm]
+%     2\\
+% \end{matrix}\right]
+% =
+% \left[\begin{matrix}
+%     1\\[0.25cm]
+%     2\\
+% \end{matrix}\right]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           AUGMENTED MATRIX FORM                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\left[\begin{matrix}
+%1 & 0 \\
+%0 & 1 \\
+%\end{matrix}\left| \, \begin{matrix} 0 \\ 0 \end{matrix} \right.\right]
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           PROOF SHELL                                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textbf{Claim. } null
+%\begin{proof}
+%    \text{We will verify the claim by...}
+%\end{proof}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      PIECEWISE FUNCTION                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\[ \boxed{\mathcal{E}(x) = \begin{cases} 
+%      -\frac{q\;N_A}{\epsilon_{si}}\;\big( x_p + x \big) &,\; -x_p \leq x \leq 0 \\ \\
+%      -\frac{q}{\epsilon_{si}}\;\bigg(N_A \cdot x_p - \frac{N_D \cdot x}{2}\bigg) &,\; 0 \leq x \leq x_0 \\ \\
+%      -\frac{q\;N_D}{\epsilon_{si}}\;\big(x_n - x \big) &,\; x_0 \leq x \leq x_n
+%  \end{cases}}
+%\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           INDUCTION SHELL                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textbf{Claim. } null
+%\begin{proof}
+%    \text{We will verify the claim by...}\\ \\
+%    \textbf{\underline{Base case}}\\ \\
+%        null\\ \\
+%    \textbf{\underline{Inductive hypothesis}}\\ \\
+%        null\\ \\
+%    \textbf{\underline{Inductive step}}\\ \\
+%        null\\ \\
+%    Therefore, by induction we have proven the claim.\\
+%\end{proof}

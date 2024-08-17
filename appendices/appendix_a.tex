@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                APPENDIX A: GLOSSARY OF EQUATIONS                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\chapter{Appendix: Glossary of Equations}
+    \begin{flalign}
+        &&\Aboxed{\phi_{bi} &= \frac{kT}{q} \cdot ln\;\bigg( \frac{N_D \cdot N_A}{{n_i}^2} \bigg)}
+        &&\textit{Built-in potential, $PN$-junction}
+        \label{eq:phi_bi}
+    \end{flalign}
+
+    \begin{flalign}
+        &&\Aboxed{W_{dep} &= \sqrt{\frac{2\epsilon_s \left(\phi_{bi} - V_{applied}\right)}{q}
+                        \cdot \Bigg( \frac{1}{N_A} + \frac{1}{N_D} \Bigg)}}
+        &&\textit{Depletion region width, total}
+        \label{eq:total_dep}
+    \end{flalign}        
+
+    \begin{flalign}
+        &&\Aboxed{C_{dep} &= A \left(\frac{\epsilon_s}{W_{dep}}\right)}
+        &&\textit{Junction capacitance}
+        \label{eq:junc_cap}
+    \end{flalign}
+
+    \begin{flalign}
+        &&\Aboxed{I_{DS,sat} &= \left(\frac{W}{2L}\right) \mu_n\,C_{ox}
+                         {\big(V_{GS} - V_{T_n}\big)}^2 (1 + \lambda V_{DS})}
+        &&\textit{$NMOS$ saturation current}
+        \label{eq:mosfet_ids_nmos_sat}\\[0.25cm]
+        &&\Aboxed{I_{DS,tri} &= \left(\frac{W}{L}\right) \mu_n\,C_{ox}
+                            \left(V_{GS} - V_{T_n} - \frac{V_{DS}}{2}\right) V_{DS}}
+        &&\textit{$NMOS$ triode current}
+        \label{eq:mosfet_ids_nmos_tri}\\[0.25cm]
+        &&\Aboxed{I_{SD,sat} &= \left(\frac{W}{2L}\right) \mu_p\,C_{ox}
+                         {\big(V_{SG} - \left|V_{T_p}\right|\big)}^2 (1 + \lambda V_{SD})}
+        &&\textit{$PMOS$ saturation current}
+        \label{eq:mosfet_ids_pmos_sat}\\[0.25cm]
+        &&\Aboxed{I_{SD,tri} &= \left(\frac{W}{L}\right) \mu_p\,C_{ox}
+                            \left(V_{SG} - \left|V_{T_p}\right| - \frac{V_{SD}}{2}\right) V_{SD}}
+        &&\textit{$PMOS$ triode current}
+        \label{eq:mosfet_ids_pmos_tri}
+    \end{flalign}
+
+    \begin{flalign}
+        &&\Aboxed{r_o &= \frac{1}{\frac{W\,\mu\,C_{ox}}{2L}{(V_{GS} - V_T)}^2\,\lambda}
+        \approx \frac{1}{\lambda\,I_{DS}}}
+        &&\textit{Output resistance for MOSFET}
+        \label{eq:mos_outresistance}
+    \end{flalign}
+
+    \begin{flalign}
+        &&\Aboxed{g_m &= \left(\frac{W}{L}\right)\mu\,C_{ox}(V_{{DS}_{sat}})
+        = \sqrt{\left(\frac{2W}{L}\right)\mu\,C_{ox} I_{DS}}
+        = \frac{2 \cdot I_{DS}}{V_{GS} - V_T}}
+        &&\textit{Transconductance for MOSFET}
+        \label{eq:mos_transconductance}
+    \end{flalign}
+
+    \begin{flalign}
+        &&\Aboxed{V_{GS} = V_T + \sqrt{\frac{2\,I_{DS}}{\frac{W}{L} \mu C_{ox}}} = V_T + V_{OD}}
+        &&\textit{Gate-source condition, diode-connected MOSFET}
+        \label{eq:mos_gate_cond}
+    \end{flalign}
+    
